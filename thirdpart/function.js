@@ -39,4 +39,34 @@ if(!username){
     return `${username} just logged in`
 }
 // console.log(loginUserMessage("Nikson"))
-console.log(loginUserMessage("nikson"))
+// console.log(loginUserMessage("nikson"))
+
+function calculateCartPrice(val1, val2 , ...num1){
+    return num1
+
+}
+console.log(calculateCartPrice(200, 400, 500, 69))
+
+const user = {
+    Username : "Nikson",
+    price : "999"
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.Username} amd price is ${anyobject.price} `);
+}
+
+// handleObject(user)// one methofd
+//next method 
+handleObject({
+    Username: "sunny",
+    price:5000
+})
+
+const myNewArray = [200, 400, 100, 600]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 300, 500 , 1000]));
