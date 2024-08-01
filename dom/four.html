@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Javascript </title>
+</head>
+<body style="background-color: #212121; color:white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(LangName){
+       const Li = document.createElement('Li');
+       Li.innerHTML =`${LangName}`
+       document.querySelector('.language').appendChild(Li)
+    }
+    addLanguage("python")
+    addLanguage("Typescript")
+
+    function addOptiLanguage(LangName){
+       const Li = document.createElement('Li');
+        Li.appendChild(document.createTextNode(LangName))
+        document.querySelector('.language').appendChild(Li)
+    }
+    addOptiLanguage('golang')
+    // Editing values
+    const secondLang = document.querySelector("Li:nth-child(2)")
+    //SecondLang.innerHtml = "Mojo" use this approach less
+    const newLi= document.createElement('Li')
+    newLi.textContent = "Mojo"
+    secondLang.replaceWith(newLi)
+
+    //edit next example
+
+    const firstLang = document.querySelector("Li:first-child")
+    firstLang.outerHTML = '<li>Typescript</>'
+    
+    //remove
+    const LastLang = document.querySelector('Li:Last-child')
+    LastLang.remove()
+
+</script>
+</html>
