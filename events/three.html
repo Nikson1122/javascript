@@ -13,13 +13,35 @@
 </body>
 
 <script>
+    let intervalId;
     const SayDate = function(str){
         console.log("nikson", Date.now());
 
-    }
-    const IntervalId = setInterval(SayDate,1000, "hi")
 
-    clearInterval(IntervalId)
-    
+    }
+    // const IntervalId = setInterval(SayDate,1000, "hi")
+
+    // clearInterval(IntervalId)
+
+    document.querySelector('#start').addEventListener('click', function(){
+     IntervalId = setInterval(function(){
+        console.log(SayDate,"hi", 1000)
+     })
+    })
+
+    // document.querySelector('#stop').addEventListener('click', function(){
+    //     clearInterval(intervalId);
+    // })
+    // document.querySelector('#stop').addEventListener('click', function(){
+    //         clearInterval(intervalId);
+    //     });
+
+    document.querySelector('#stop').addEventListener('click', function() {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null; // Reset intervalId to prevent multiple clears
+            }
+        });
+
 </script>
 </html>
